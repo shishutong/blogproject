@@ -24,9 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=(j)viusr-2v4#7y81uz3jaq7+&vkpv+)^yh0z-y3$wu*gcy16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.shishutong.xyz']
 
 
 # Application definition
@@ -121,8 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [
-#static前面不能加斜杠
-#os.path.join(BASE_DIR, 'static/'),
-#os.path.join(BASE_DIR, "blog","static/"),
-#]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
